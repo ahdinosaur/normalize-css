@@ -1,4 +1,4 @@
-var insert = require('insert-css');
-var normalize = require('./normalize');
+var insert = require('insert-css')
+var fs = require('fs')
 
-insert(normalize);
+insert(fs.readFileSync(require.resolve('normalize.css'), 'utf8'))
